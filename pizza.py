@@ -54,6 +54,8 @@ for pizza in pizzas:
 
     pizza_ids[pizza_name] = pizza_id
 
+print pizza_ids
+
 # We now have all the pizza ids...
 
 def order_pizza(name):
@@ -63,12 +65,24 @@ def order_pizza(name):
     click_xpath('//*[@id="orderBuilder"]/div/button')
     click_xpath('//*[@id="orderBuilder"]/div/button')
 
-order_pizza('Lg Orig Spicy Italian')
+pizzas_to_order = ['Lg Thin Buffalo Chicken',
+    'LG Thin Garden Fresh',
+    'Lg Orig Pepperoni',
+    'LG Thin Hawaiian BBQ CKN']
+
+for pizza_name in pizzas_to_order:
+    order_pizza(pizza_name)
+
+click_xpath('//*[@id="cart"]/ul[2]/li[3]/button')
+click_xpath('//*[@id="ip-payment-method"]')
 
 raw_input()
 
+click_xpath('//*[@id="checkout"]/div[3]/button')
 
-print el
+raw_input()
+
+click_xpath('//*[@id="saved-cc"]/div/button')
 
 raw_input()
 
