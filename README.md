@@ -1,4 +1,4 @@
 acmpizza
 ========
 
-Orders pizza programmatically for ACM Code@NIghts. Uses Selenium. Awesome.
+Orders pizza programmatically for ACM Code@Nights. Uses Selenium. Awesome.
